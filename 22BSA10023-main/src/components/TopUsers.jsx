@@ -7,11 +7,11 @@ function TopUsers() {
   useEffect(() => {
     const fetchTopUsers = async () => {
       try {
-        // Get Authorization Token
+       
         const token = await getAuthToken();
         if (!token) throw new Error("Failed to obtain token");
 
-        // Fetch Top Users with Authorization
+        
         const response = await fetch("http://20.244.56.144/test/top-users", {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -49,7 +49,7 @@ function TopUsers() {
   );
 }
 
-// Mock data for fallback
+
 const mockTopUsers = [
   { id: 1, name: "Alice", postCount: 120 },
   { id: 2, name: "Bob", postCount: 100 },
